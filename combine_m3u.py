@@ -20,9 +20,6 @@ def fetch_m3u_content(url):
 # Function to check if the URL's speed is above the threshold
 def is_url_speed_acceptable(url):
     try:
-        # Start measuring time
-        start_time = time.time()
-        
         # Make a GET request and fetch a small chunk of the file
         response = requests.get(url, stream=True, timeout=5)
         
@@ -30,8 +27,10 @@ def is_url_speed_acceptable(url):
         if response.status_code != 200:
             return False
 
+        # Start measuring time
+        start_time = time.time()
         # Read a small chunk (e.g., 1024 bytes)
-        chunk_size = 1024
+        chunk_size = 1024*1024
         chunk = next(response.iter_content(chunk_size=chunk_size), None)
 
         # End measuring time
