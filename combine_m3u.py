@@ -2,8 +2,8 @@ import requests
 import time
 
 # URLs for the two files in their repositories
-url_1 = 'https://raw.githubusercontent.com/username/repo1/main/path/to/1.m3u'
-url_2 = 'https://raw.githubusercontent.com/username/repo2/main/path/to/2.m3u'
+url_1 = 'https://iptv-org.github.io/iptv/index.m3u'
+url_2 = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
 
 # Threshold in KB/s. URLs slower than this will be removed.
 SPEED_THRESHOLD_KBPS = 100  # Example: 100 KB/s
