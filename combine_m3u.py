@@ -6,7 +6,7 @@ url_1 = 'https://iptv-org.github.io/iptv/index.m3u'
 url_2 = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
 
 # Threshold in KB/s. URLs slower than this will be removed.
-SPEED_THRESHOLD_KBPS = 100  # Example: 100 KB/s
+SPEED_THRESHOLD_KBPS = 200  # Example: 100 KB/s
 
 # Function to fetch the content of an .m3u file
 def fetch_m3u_content(url):
