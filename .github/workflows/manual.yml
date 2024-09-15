@@ -1,0 +1,40 @@
+# This is a basic workflow that is manually triggered
+name: Update M3U Playlists
+
+# Trigger the workflow on push or a daily schedule
+on:
+  push:
+    paths:
+      - "https://iptv-org.github.io/iptv/index.m3u"
+      - "https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u"
+  schedule:
+    - cron: '0 0 * * *'  # Runs every day at midnight
+
+jobs:
+  update_m3u:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install requests
+
+    - name: Run the Python script
+      run: |
+        python your_script.py
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add combined_cleaned.m3u
+        git commit -m "Update M3U Playlist"
+        git push
