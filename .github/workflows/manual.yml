@@ -3,12 +3,9 @@ name: Update M3U Playlists
 
 # Trigger the workflow on push or a daily schedule
 on:
-  push:
-    paths:
-      - "https://iptv-org.github.io/iptv/index.m3u"
-      - "https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u"
   schedule:
-    - cron: '0 0 * * *'  # Runs every day at midnight
+    - cron: '0 0 * * 1'  # Runs every day at midnight
+  workflow_dispatch: # Allows manual triggering from the GitHub Actions interface
 
 jobs:
   update_m3u:
