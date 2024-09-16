@@ -21,7 +21,7 @@ def fetch_m3u_content(url):
 def is_url_speed_acceptable(url):
     try:
         # Make a GET request and fetch a small chunk of the file
-        response = requests.get(url, stream=True, timeout=5)
+        response = requests.get(url, stream=True, timeout=10)
         
         # If the request is not successful, return False
         if response.status_code != 200:
