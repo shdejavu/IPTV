@@ -8,15 +8,6 @@ url_2 = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
 # Threshold in KB/s. URLs slower than this will be removed.
 SPEED_THRESHOLD_KBPS = 200  # Example: 100 KB/s
 
-# Function to fetch the content of an .m3u file
-def fetch_m3u_content(url):
-    response = requests.get(url)
-    if response.status_code == 200:
-        return response.text
-    else:
-        print(f"Failed to fetch {url}")
-        return None
-
 # Function to check if the URL's speed is above the threshold
 def is_url_speed_acceptable(url):
     try:
@@ -79,21 +70,14 @@ def process_m3u(content):
     
     return "\n".join(valid_lines)
 
-# Fetch and process both .m3u files
-content1 = fetch_m3u_content(url_1)
-content2 = fetch_m3u_content(url_2)
-
-if content1 and content2:
-    processed_content1 = process_m3u(content1)
-    processed_content2 = process_m3u(content2)
+processed_content1 = process_m3u(content1)
+processed_content2 = process_m3u(content2)
     
-    # Combine the two processed playlists
-    combined_content = processed_content1 + '\n' + processed_content2
+# Combine the two processed playlists
+combined_content = processed_content1 + '\n' + processed_content2
     
-    # Save the combined and cleaned content to a new .m3u file
-    with open('combined_cleaned.m3u', 'w') as combined_file:
+# Save the combined and cleaned content to a new .m3u file
+with open('combined_cleaned.m3u', 'w') as combined_file:
         combined_file.write(combined_content)
 
-    print("Combined and cleaned playlist saved as 'combined_cleaned.m3u'")
-else:
-    print("Failed to fetch one or both of the .m3u files.")
+print("Combined and cleaned playlist saved as 'combined_cleaned.m3u'")
