@@ -70,8 +70,8 @@ def process_m3u(content):
     
     return "\n".join(valid_lines)
 
-processed_content1 = process_m3u(content1)
-processed_content2 = process_m3u(content2)
+processed_content1 = process_m3u(url_1)
+processed_content2 = process_m3u(url_2)
     
 # Combine the two processed playlists
 combined_content = processed_content1 + '\n' + processed_content2
