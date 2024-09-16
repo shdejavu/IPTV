@@ -1,5 +1,6 @@
 import requests
 import time
+import re
 
 # URLs for the two files in their repositories
 url_0 = 'https://iptv-org.github.io/iptv/index.m3u'
