@@ -30,7 +30,7 @@ def is_url_speed_acceptable(url):
         # Start measuring time
         start_time = time.time()
         # Read a small chunk (e.g., 1024 bytes)
-        chunk_size = 1024*100
+        chunk_size = 10240
         chunk = next(response.iter_content(chunk_size=chunk_size), None)
 
         # End measuring time
