@@ -8,6 +8,10 @@ url_2 = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
 # Threshold in KB/s. URLs slower than this will be removed.
 SPEED_THRESHOLD_KBPS = 150  # Example: 100 KB/s
 
+def is_url_ipv6(url):
+    # Check if the URL contains an IPv6 address by looking for square brackets
+    return bool(re.search(r'\[.*?\]', url))
+    
 # Function to fetch the content of an .m3u file
 def fetch_m3u_content(url):
     response = requests.get(url)
@@ -19,6 +23,11 @@ def fetch_m3u_content(url):
 
 # Function to check if the URL's speed is above the threshold
 def is_url_speed_acceptable(url):
+    # Comment out the IPv6 check if you don't want to use it
+    # if is_url_ipv6(url):
+    #     print(f"Skipping IPv6 URL: {url}")
+    #     return False
+    
     try:
         # Make a GET request and fetch a small chunk of the file
         response = requests.get(url, stream=True, timeout=5)
