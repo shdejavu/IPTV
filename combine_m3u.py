@@ -2,8 +2,9 @@ import requests
 import time
 
 # URLs for the two files in their repositories
-url_1 = 'https://iptv-org.github.io/iptv/index.m3u'
-url_2 = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
+url_0 = 'https://iptv-org.github.io/iptv/index.m3u'
+url_00 = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
+url_list =[ 'https://iptv-org.github.io/iptv/languages/zho.m3u','https://iptv-org.github.io/iptv/languages/jpn.m3u','https://iptv-org.github.io/iptv/languages/eng.m3u']
 
 # Threshold in KB/s. URLs slower than this will be removed.
 SPEED_THRESHOLD_KBPS = 150  # Example: 100 KB/s
@@ -88,21 +89,25 @@ def process_m3u(content):
     
     return "\n".join(valid_lines)
 
-# Fetch and process both .m3u files
-content1 = fetch_m3u_content(url_1)
-content2 = fetch_m3u_content(url_2)
+def process_multiple_m3u(url_list):
+    processed_content_list = []
 
-if content1 and content2:
-    processed_content1 = process_m3u(content1)
-    processed_content2 = process_m3u(content2)
-    
-    # Combine the two processed playlists
-    combined_content = processed_content1 + '\n' + processed_content2
-    
+    # Iterate over each URL, fetch and process content
+    for url in url_list:
+        try:
+            content = fetch_m3u_content(url)  # Fetch content
+            processed_content = process_m3u(content)  # Process content
+            processed_content_list.append(processed_content)
+        except Exception as e:
+            # Log the error and continue with the next URL
+            print(f"Error processing {url}: {e}")
+            continue
+
+    # Combine all processed contents into one
+    combined_content = '\n'.join(processed_content_list)
+
     # Save the combined and cleaned content to a new .m3u file
     with open('combined_cleaned.m3u', 'w') as combined_file:
         combined_file.write(combined_content)
 
-    print("Combined and cleaned playlist saved as 'combined_cleaned.m3u'")
-else:
-    print("Failed to fetch one or both of the .m3u files.")
+process_multiple_m3u(url_list)
