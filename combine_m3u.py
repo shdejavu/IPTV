@@ -6,10 +6,11 @@ url_0 = 'https://iptv-org.github.io/iptv/index.m3u'
 url_00 = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
 url_list =['https://iptv-org.github.io/iptv/languages/zho.m3u',
            'https://iptv-org.github.io/iptv/languages/jpn.m3u',
-           'https://iptv-org.github.io/iptv/languages/eng.m3u']
+           'https://iptv-org.github.io/iptv/languages/eng.m3u',
+           'https://iptv-org.github.io/iptv/languages/undefined.m3u']
 
 # Threshold in KB/s. URLs slower than this will be removed.
-SPEED_THRESHOLD_KBPS = 150  # Example: 100 KB/s
+SPEED_THRESHOLD_KBPS = 100  # Example: 100 KB/s
 
 def is_url_ipv6(url):
     # Check if the URL contains an IPv6 address by looking for square brackets
