@@ -89,7 +89,7 @@ def process_m3u(content):
         else:
             # Add non-#EXTINF lines (if there are any) such as comments
             if line.startswith('#EXTM3U'):
-               valid_lines.append('#EXTM3U x-tvg-url="https://192.168.0.100:3000/guide.xml" \n')
+               valid_lines.append('#EXTM3U') # x-tvg-url="https://192.168.0.100:3000/guide.xml" \n')
                i += 1
     
     return "\n".join(valid_lines)
