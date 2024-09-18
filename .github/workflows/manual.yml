@@ -1,37 +1,39 @@
-# This is a basic workflow that is manually triggered
-name: Update M3U Playlists
+name: M3U Playlist Processor
 
-# Trigger the workflow on push or a daily schedule
 on:
   schedule:
-    - cron: '0 0 * * 1'  # Runs every day at midnight
-  workflow_dispatch: # Allows manual triggering from the GitHub Actions interface
+    - cron: '0 0 * * 1' # Daily schedule
+  workflow_dispatch:
 
 jobs:
-  update_m3u:
+  run_script:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v2
       with:
         python-version: '3.x'
 
     - name: Install dependencies
       run: |
+        python -m pip install --upgrade pip
         pip install requests
 
-    - name: Run the Python script
+    - name: Run M3U processing script
       run: |
-        python combine_m3u.py
+        python nm3u.py
 
     - name: Commit and push changes
       run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
+        git config --local user.email "actions@github.com"
+        git config --local user.name "GitHub Actions"
         git add combined_cleaned.m3u
-        git commit -m "Update M3U Playlist"
+        git add iplive.m3u
+        git commit -m "Update combined_cleaned.m3u with new valid URLs"
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
