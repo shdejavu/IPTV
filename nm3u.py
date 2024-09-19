@@ -22,6 +22,13 @@ SPEED_THRESHOLD_KBPS = 100  # Example: 100 KB/s
 def is_url_ipv6(url):
     return bool(re.search(r'\[.*?\]', url))
 
+# Function to process and modify the #EXTINF metadata
+def modify_extinf(extinf_line, index):
+    # Change the tvg-id to 's' + index and the group-title to 'general'
+    modified_line = re.sub(r'tvg-id="[^"]+"', f'tvg-id="s{index}"', extinf_line)
+    modified_line = re.sub(r'group-title="[^"]+"', 'group-title="general"', modified_line)
+    return modified_line
+    
 # Fetch M3U content
 def fetch_m3u_content(url):
     response = requests.get(url)
@@ -31,6 +38,12 @@ def fetch_m3u_content(url):
         print(f"Failed to fetch {url}")
         return None
 
+def is_valid_media_type(response):
+    content_type = response.headers.get('Content-Type', '')
+    if "video" in content_type or "application" in content_type:
+        return True
+    return False
+    
 # Speed check for regular URLs
 def is_url_speed_acceptable(url):
     try:
@@ -55,6 +68,11 @@ def is_url_speed_acceptable_special(url):
         response = requests.get(url, stream=True, timeout=5)
         if response.status_code != 200:
             return False
+
+        if not is_valid_media_type(response):
+            print(f"Invalid media type: {response.headers.get('Content-Type')}")
+            return False
+            
         start_time = time.time()
         chunk_size = 1024*500  # 50x chunk size for special check
         chunk = next(response.iter_content(chunk_size=chunk_size), None)
@@ -79,6 +97,7 @@ def process_m3u(content, existing_channels, filter_url=None, special_check=False
     lines = content.splitlines()
     valid_lines = []
     i = 0
+    index = 0
     while i < len(lines):
         line = lines[i]
         if line.startswith('#EXTINF') and (i + 1) < len(lines):
@@ -97,6 +116,10 @@ def process_m3u(content, existing_channels, filter_url=None, special_check=False
                     is_acceptable = is_url_speed_acceptable(url_line)
 
                 if is_acceptable:
+                    if special_check:
+                        index+=1
+                        extinf_line = modify_extinf(extinf_line, index)
+                        
                     valid_lines.append(extinf_line)
                     valid_lines.append(url_line)
                     if channel_name in existing_channels:
