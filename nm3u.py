@@ -65,7 +65,7 @@ def is_url_speed_acceptable(url):
 # Speed check for special filtered URLs (larger chunk size)
 def is_url_speed_acceptable_special(url):
     try:
-        response = requests.get(url, stream=True, timeout=5)
+        response = requests.get(url, stream=True, timeout=15)
         if response.status_code != 200:
             return False
 
