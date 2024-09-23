@@ -25,7 +25,8 @@ def is_url_ipv6(url):
 # Function to process and modify the #EXTINF metadata
 def modify_extinf(extinf_line, index):
     # Change the tvg-id to 's' + index and the group-title to 'general'
-    modified_line = re.sub(r'tvg-id="[^"]+"', f'tvg-id="s{index}"', extinf_line)
+    # modified_line = re.sub(r'tvg-id="[^"]+"', f'tvg-id="s{index}"', extinf_line)
+    modified_line = re.sub(r'tvg-id="([^"]+)",\s*tvg-name="([^"]+)"', r'tvg-id="\2", tvg-name="\2"', extinf_line)
     modified_line = re.sub(r'group-title="[^"]+"', 'group-title="general"', modified_line)
     return modified_line
     
