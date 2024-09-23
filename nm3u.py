@@ -26,7 +26,13 @@ def is_url_ipv6(url):
 def modify_extinf(extinf_line, index):
     # Change the tvg-id to 's' + index and the group-title to 'general'
     # modified_line = re.sub(r'tvg-id="[^"]+"', f'tvg-id="s{index}"', extinf_line)
-    modified_line = re.sub(r'tvg-id="([^"]+)",\s*tvg-name="([^"]+)"', r'tvg-id="\2", tvg-name="\2"', extinf_line)
+    modified_line = re.sub(
+        r'tvg-id="([^"]+)"\s*tvg-name="([^"]+)"',
+        lambda m: (
+            # Check if tvg-name contains CCTV
+            'tvg-id="' + (re.sub(r"(CCTV)(\d+)", r"\1 \2", m.group(2)) if "CCTV" in m.group(2) else m.group(2)) + '" ' +
+            'tvg-name="' + re.sub(r"(CCTV)(\d+)", r"\1 \2", m.group(2)) + '"'  # Format tvg-name
+        ), extinf_line)
     modified_line = re.sub(r'group-title="[^"]+"', 'group-title="general"', modified_line)
     return modified_line
     
