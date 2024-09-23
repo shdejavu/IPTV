@@ -43,6 +43,15 @@ def is_valid_media_type(response):
     if "video" in content_type or "application" in content_type:
         return True
     return False
+
+def is_valid_language(tvg_name):
+    # English, Chinese, and Japanese Unicode ranges
+    valid_characters = re.compile(r'^[\u0020-\u007F\u4E00-\u9FFF\u3040-\u30FF]+$')
+    return bool(valid_characters.match(tvg_name))
+
+def write_special_m3u(content, files):
+    with open(files, 'w') as file:
+        file.write(content)
     
 # Speed check for regular URLs
 def is_url_speed_acceptable(url):
@@ -210,6 +219,7 @@ def process_multiple_m3u(url_list, special_url, filter_url):
         for i in range(0, len(filtered_content), 2):
             channel_name = extract_channel_name(filtered_content[i])
             append_or_replace_combined_cleaned(channel_name, filtered_content[i], filtered_content[i + 1])
+        write_special_m3u(filtered_content,'migu.m3u')
 
 # URLs to process
 special_url = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
