@@ -52,7 +52,39 @@ def is_valid_language(tvg_name):
 def write_special_m3u(content, files):
     with open(files, 'w') as file:
         file.write(content)
-    
+
+# Function to modify group-title based on title input for migu processing
+def process_migu_m3u(content, title):
+    lines = content.splitlines()
+    valid_lines = []
+
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        # Check if it's an #EXTINF line, and the next line is the URL
+        if line.startswith('#EXTINF') and (i + 1) < len(lines):
+            extinf_line = line  # Store the #EXTINF line
+            url_line = lines[i + 1]  # Store the URL line
+
+            # Filter URLs containing 'https://livednow.com/migu/'
+            if 'https://livednow.com/migu/' in url_line:
+                # Replace group-title based on input parameter (title)
+                extinf_line = re.sub(r'group-title="[^"]*"', f'group-title="{title}"', extinf_line)
+
+                if is_special_url_speed_acceptable(url_line):
+                    # Add both the #EXTINF and the URL if speed is acceptable
+                    valid_lines.append(extinf_line)
+                    valid_lines.append(url_line)
+            i += 2  # Skip to the next pair (#EXTINF and URL)
+        else:
+            if line.startswith('#EXTM3U'):
+               valid_lines.append(line)
+               i += 1
+
+    # Write the migu.m3u file
+    with open('migu.m3u', 'w') as migu_file:
+        migu_file.write("\n".join(valid_lines))
+
 # Speed check for regular URLs
 def is_url_speed_acceptable(url):
     try:
@@ -216,7 +248,7 @@ def process_multiple_m3u(url_list, special_url, filter_url):
     special_content = fetch_m3u_content(special_url)
     if special_content:
         filtered_content = process_m3u(special_content, existing_channels, filter_url=filter_url, special_check=True)
-        write_special_m3u(filtered_content,'migu.m3u')
+        process_migu_m3u(filtered_content,'綜合')
         for i in range(0, len(filtered_content), 2):
             channel_name = extract_channel_name(filtered_content[i])
             append_or_replace_combined_cleaned(channel_name, filtered_content[i], filtered_content[i + 1])
