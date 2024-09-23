@@ -216,10 +216,10 @@ def process_multiple_m3u(url_list, special_url, filter_url):
     special_content = fetch_m3u_content(special_url)
     if special_content:
         filtered_content = process_m3u(special_content, existing_channels, filter_url=filter_url, special_check=True)
+        write_special_m3u(filtered_content,'migu.m3u')
         for i in range(0, len(filtered_content), 2):
             channel_name = extract_channel_name(filtered_content[i])
             append_or_replace_combined_cleaned(channel_name, filtered_content[i], filtered_content[i + 1])
-        write_special_m3u(filtered_content,'migu.m3u')
 
 # URLs to process
 special_url = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
