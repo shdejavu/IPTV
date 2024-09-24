@@ -141,6 +141,35 @@ def extract_channel_name(extinf_line):
         return match.group(1)
     return None
 
+# Read the current "iplive.m3u" to compare with new content
+def read_existing_channels(filepath):
+    existing_channels = {}
+    try:
+        with open(filepath, 'r') as file:
+            lines = file.readlines()
+            i = 0
+            while i < len(lines):
+                if lines[i].startswith('#EXTINF'):
+                    extinf_line = lines[i]
+                    url_line = lines[i + 1] if (i + 1) < len(lines) else ''
+                    channel_name = extract_channel_name(extinf_line)
+                    if channel_name:
+                        existing_channels[channel_name] = (extinf_line, url_line)
+                    i += 2
+                else:
+                    i += 1
+    except FileNotFoundError:
+        print(f"File {filepath} not found, starting fresh.")
+    return existing_channels
+
+def compare_and_update_m3u(new_channels, existing_channels, special=False):
+    to_process = []
+    for tvg_name, url in new_channels.items():
+        # If channel is new or URL has changed, process it
+        if tvg_name not in existing_channels or existing_channels[tvg_name] != url:
+            to_process.append((tvg_name, url))
+    return to_process
+
 # Process the M3U content
 def process_m3u(content, existing_channels, filter_url=None, special_check=False):
     lines = content.splitlines()
@@ -179,35 +208,6 @@ def process_m3u(content, existing_channels, filter_url=None, special_check=False
         else:
             i += 1
     return valid_lines
-
-# Read the current "iplive.m3u" to compare with new content
-def read_existing_channels(filepath):
-    existing_channels = {}
-    try:
-        with open(filepath, 'r') as file:
-            lines = file.readlines()
-            i = 0
-            while i < len(lines):
-                if lines[i].startswith('#EXTINF'):
-                    extinf_line = lines[i]
-                    url_line = lines[i + 1] if (i + 1) < len(lines) else ''
-                    channel_name = extract_channel_name(extinf_line)
-                    if channel_name:
-                        existing_channels[channel_name] = (extinf_line, url_line)
-                    i += 2
-                else:
-                    i += 1
-    except FileNotFoundError:
-        print(f"File {filepath} not found, starting fresh.")
-    return existing_channels
-
-def compare_and_update_m3u(new_channels, existing_channels, special=False):
-    to_process = []
-    for tvg_name, url in new_channels.items():
-        # If channel is new or URL has changed, process it
-        if tvg_name not in existing_channels or existing_channels[tvg_name] != url:
-            to_process.append((tvg_name, url))
-    return to_process
 
 # Write the combined cleaned content to "combined_cleaned.m3u"
 def append_or_replace_combined_cleaned(channel_name, extinf_line, url_line):
