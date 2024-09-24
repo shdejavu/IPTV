@@ -263,7 +263,7 @@ def process_multiple_m3u(url_list, special_url, filter_url):
 
 # URLs to process
 special_url = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
-filter_url = 'https://livednow.com/migu/'
+filter_url = 'livednow'
 
 # Process the M3U files
 process_multiple_m3u(url_list, special_url, filter_url)
