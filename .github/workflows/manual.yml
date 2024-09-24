@@ -35,9 +35,9 @@ jobs:
         curl https://iptv-org.github.io/iptv/languages/undefined.m3u > undefined.m3u
         cat zho.m3u jpn.m3u eng.m3u undefined.m3u > iplive.m3u
 
-    - name: Combine all m3u files
+    - name: Combine m3u files
       run: |
-        cat combined_cleaned.m3u all0.m3u > all.m3u  # Combine processed channels into all.m3u
+        cat migu.m3u all0.m3u > all.m3u  # Combine processed channels into all.m3u
 
     - name: Commit changes
       run: |
