@@ -23,17 +23,17 @@ def is_url_ipv6(url):
     return bool(re.search(r'\[.*?\]', url))
 
 # Function to process and modify the #EXTINF metadata
-def modify_extinf(extinf_line, index):
+def modify_extinf(extinf_line, title, flag):
     # Change the tvg-id to 's' + index and the group-title to 'general'
     # modified_line = re.sub(r'tvg-id="[^"]+"', f'tvg-id="s{index}"', extinf_line)
-    modified_line = re.sub(
-        r'tvg-id="([^"]+)"\s*tvg-name="([^"]+)"',
+    if flag==1:
+       modified_line = re.sub(r'tvg-id="([^"]+)"\s*tvg-name="([^"]+)"',
         lambda m: (
             # Check if tvg-name contains CCTV
             'tvg-id="' + (re.sub(r"(CCTV)(\d+)", r"\1 \2", m.group(2)) if "CCTV" in m.group(2) else m.group(2)) + '" ' +
             'tvg-name="' + re.sub(r"(CCTV)(\d+)", r"\1 \2", m.group(2)) + '"'  # Format tvg-name
         ), extinf_line)
-    modified_line = re.sub(r'group-title="[^"]+"', 'group-title="general"', modified_line)
+    modified_line = re.sub(r'group-title="[^"]+"', 'group-title="{title}"', modified_line)
     return modified_line
     
 # Fetch M3U content
@@ -63,7 +63,7 @@ def write_special_m3u(content, files):
 # Function to modify group-title based on title input for migu processing
 def process_migu_m3u(content, title):
     lines = content.splitlines()
-    valid_lines = []
+    valid_lines = ['#EXTM3U x-tvg-url="https://assets.livednow.com/epg.xml"\n']
 
     i = 0
     while i < len(lines):
@@ -76,7 +76,8 @@ def process_migu_m3u(content, title):
             # Filter URLs containing 'https://livednow.com/migu/'
             if 'https://livednow.com/migu/' in url_line:
                 # Replace group-title based on input parameter (title)
-                extinf_line = re.sub(r'group-title="[^"]*"', f'group-title="{title}"', extinf_line)
+                # extinf_line = re.sub(r'group-title="[^"]*"', f'group-title="{title}"', extinf_line)
+                extinf_line = modify_extinf(extinf_line, title, 1)
 
                 if is_special_url_speed_acceptable(url_line):
                     # Add both the #EXTINF and the URL if speed is acceptable
@@ -166,7 +167,7 @@ def process_m3u(content, existing_channels, filter_url=None, special_check=False
                 if is_acceptable:
                     if special_check:
                         index+=1
-                        extinf_line = modify_extinf(extinf_line, index)
+                        extinf_line = modify_extinf(extinf_line, 'general', 0)
                         
                     valid_lines.append(extinf_line)
                     valid_lines.append(url_line)
