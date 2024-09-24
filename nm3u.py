@@ -90,7 +90,7 @@ def process_m3u(content, processed_channels, special_check=False):
             extinf_line = line
             url_line = lines[i + 1]
             if url_line.startswith('http'):
-                tvg_name_match = re.search(r'tvg-name="([^"]+)"', extinf_line)
+                tvg_name_match = re.search(r'tvg-id="([^"]+)"', extinf_line)
                 if tvg_name_match:
                     tvg_name = tvg_name_match.group(1)
                     if tvg_name in processed_channels and processed_channels[tvg_name] == url_line:
@@ -122,8 +122,11 @@ def compare_and_update_m3u(new_content, old_content, special_check=False):
             tvg_name_match = re.search(r'tvg-name="([^"]+)"', line)
             if tvg_name_match:
                 tvg_name = tvg_name_match.group(1)
-                url_line = next(old_content.splitlines(), None)
-                old_channels[tvg_name] = url_line
+            else:
+                # Fallback to channel name at the end of the #EXTINF line
+                tvg_name = extinf_line.split(',')[-1].strip()
+            url_line = next(old_content.splitlines(), None)
+            old_channels[tvg_name] = url_line
 
     # Parse the new content
     lines = new_content.splitlines()
@@ -137,9 +140,12 @@ def compare_and_update_m3u(new_content, old_content, special_check=False):
                 tvg_name_match = re.search(r'tvg-name="([^"]+)"', extinf_line)
                 if tvg_name_match:
                     tvg_name = tvg_name_match.group(1)
-                    new_channels[tvg_name] = url_line
-                    if tvg_name not in old_channels or old_channels[tvg_name] != url_line:
-                        to_process.append((tvg_name, url_line))
+                else:
+                    # Fallback to channel name at the end of the #EXTINF line
+                    tvg_name = extinf_line.split(',')[-1].strip()
+                new_channels[tvg_name] = url_line
+                if tvg_name not in old_channels or old_channels[tvg_name] != url_line:
+                    to_process.append((tvg_name, url_line))
             i += 2
 
     # Process only the new or changed channels
@@ -168,13 +174,14 @@ def update_m3u_files():
 
     # Compare and update iplive.m3u
     updated_channels = compare_and_update_m3u(new_content, old_content)
-    with open('iplive.m3u', 'w') as f:
-        f.write("\n".join(updated_channels))
+    #with open('iplive.m3u', 'w') as f:
+    #    f.write("\n".join(updated_channels))
 
     # Special processing for migu.m3u
     special_content = fetch_m3u_content(special_url)
     filtered_special_content = "\n".join(line for line in special_content.splitlines() if filter_url in line)
     #special_channels = compare_and_update_m3u(filtered_special_content, old_content, special_check=True)
+    special_channels = filtered_special_content
     
     # Write to combined_cleaned.m3u and migu.m3u
     with open('combined_cleaned.m3u', 'a') as f:
