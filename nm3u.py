@@ -201,6 +201,14 @@ def read_existing_channels(filepath):
         print(f"File {filepath} not found, starting fresh.")
     return existing_channels
 
+def compare_and_update_m3u(new_channels, existing_channels, special=False):
+    to_process = []
+    for tvg_name, url in new_channels.items():
+        # If channel is new or URL has changed, process it
+        if tvg_name not in existing_channels or existing_channels[tvg_name] != url:
+            to_process.append((tvg_name, url))
+    return to_process
+
 # Write the combined cleaned content to "combined_cleaned.m3u"
 def append_or_replace_combined_cleaned(channel_name, extinf_line, url_line):
     # Read the existing "combined_cleaned.m3u" file to update or append new channels
