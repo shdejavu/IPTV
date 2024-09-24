@@ -174,14 +174,14 @@ def update_m3u_files():
 
     # Compare and update iplive.m3u
     updated_channels = compare_and_update_m3u(new_content, old_content)
-    #with open('iplive.m3u', 'w') as f:
-    #    f.write("\n".join(updated_channels))
+    with open('iplive.m3u', 'w') as f:
+        f.write("\n".join(updated_channels))
 
     # Special processing for migu.m3u
     special_content = fetch_m3u_content(special_url)
     filtered_special_content = "\n".join(line for line in special_content.splitlines() if filter_url in line)
-    #special_channels = compare_and_update_m3u(filtered_special_content, old_content, special_check=True)
-    special_channels = filtered_special_content
+    special_channels = compare_and_update_m3u(filtered_special_content, old_content, special_check=True)
+    #special_channels = filtered_special_content
     
     # Write to combined_cleaned.m3u and migu.m3u
     with open('combined_cleaned.m3u', 'a') as f:
