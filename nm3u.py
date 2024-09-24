@@ -12,7 +12,7 @@ url_list = [
 ]
 
 special_url = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
-filter_url = 'https://livednow.com/migu/'
+filter_url = 'livednow'
 
 SPEED_THRESHOLD_KBPS = 100
 SPECIAL_CHUNK_SIZE = 10240 * 10
@@ -79,115 +79,101 @@ def is_url_speed_acceptable(url, chunk_size=NORMAL_CHUNK_SIZE):
     except requests.RequestException:
         return False
 
-
-def process_m3u(content, processed_channels, special_check=False):
+def process_m3u(content, filter_url=None, special_process=False):
     lines = content.splitlines()
     valid_lines = []
     i = 0
+    
     while i < len(lines):
         line = lines[i]
         if line.startswith('#EXTINF') and (i + 1) < len(lines):
             extinf_line = line
             url_line = lines[i + 1]
-            if url_line.startswith('http'):
-                tvg_name_match = re.search(r'tvg-id="([^"]+)"', extinf_line)
-                if tvg_name_match:
-                    tvg_name = tvg_name_match.group(1)
-                    if tvg_name in processed_channels and processed_channels[tvg_name] == url_line:
-                        print(f"Skipping unchanged channel: {tvg_name}")
-                    else:
-                        chunk_size = SPECIAL_CHUNK_SIZE if special_check else NORMAL_CHUNK_SIZE
-                        if is_url_speed_acceptable(url_line, chunk_size=chunk_size):
-                            valid_lines.append(extinf_line)
-                            valid_lines.append(url_line)
-                            processed_channels[tvg_name] = url_line
-                        else:
-                            print(f"Removing slow URL: {url_line}")
+
+            # Extract tvg-name or fallback to the title in #EXTINF line
+            match = re.search(r'tvg-id="([^"]*)"', extinf_line)
+            tvg_name = match.group(1) if match else extinf_line.split(',')[-1]
+
+            if filter_url and filter_url in url_line:
+                special_process = True
+
+            if is_url_speed_acceptable(url_line, special=special_process):
+                valid_lines.append(extinf_line)
+                valid_lines.append(url_line)
             i += 2
         else:
             if line.startswith('#EXTM3U'):
                 valid_lines.append('#EXTM3U')
             i += 1
+    
     return "\n".join(valid_lines)
 
-
-def compare_and_update_m3u(new_content, old_content, special_check=False):
-    old_channels = {}
-    new_channels = {}
-    to_process = []
-
-    # Parse the old content
-    for line in old_content.splitlines():
-        if line.startswith('#EXTINF'):
-            tvg_name_match = re.search(r'tvg-name="([^"]+)"', line)
-            if tvg_name_match:
-                tvg_name = tvg_name_match.group(1)
-            else:
-                # Fallback to channel name at the end of the #EXTINF line
-                tvg_name = extinf_line.split(',')[-1].strip()
-            url_line = next(old_content.splitlines(), None)
-            old_channels[tvg_name] = url_line
-
-    # Parse the new content
-    lines = new_content.splitlines()
-    i = 0
-    while i < len(lines):
-        line = lines[i]
-        if line.startswith('#EXTINF') and (i + 1) < len(lines):
-            extinf_line = line
-            url_line = lines[i + 1]
-            if url_line.startswith('http'):
-                tvg_name_match = re.search(r'tvg-name="([^"]+)"', extinf_line)
-                if tvg_name_match:
-                    tvg_name = tvg_name_match.group(1)
-                else:
-                    # Fallback to channel name at the end of the #EXTINF line
-                    tvg_name = extinf_line.split(',')[-1].strip()
-                new_channels[tvg_name] = url_line
-                if tvg_name not in old_channels or old_channels[tvg_name] != url_line:
-                    to_process.append((tvg_name, url_line))
-            i += 2
-
-    # Process only the new or changed channels
-    processed_channels = {}
-    for tvg_name, url in to_process:
-        chunk_size = SPECIAL_CHUNK_SIZE if special_check else NORMAL_CHUNK_SIZE
-        if is_url_speed_acceptable(url, chunk_size=chunk_size):
-            processed_channels[tvg_name] = url
-
-    return processed_channels
-
-
-def update_m3u_files():
-    # Fetch old iplive.m3u content
-    if os.path.exists('iplive.m3u'):
-        with open('iplive.m3u', 'r') as f:
-            old_content = f.read()
-    else:
-        old_content = ""
-
-    # Combine new URL list
-    new_content_list = []
-    for url in url_list:
-        new_content_list.append(fetch_m3u_content(url))
-    new_content = '\n'.join(new_content_list)
-
-    # Compare and update iplive.m3u
-    updated_channels = compare_and_update_m3u(new_content, old_content)
-    with open('iplive.m3u', 'w') as f:
-        f.write("\n".join(updated_channels))
-
-    # Special processing for migu.m3u
-    special_content = fetch_m3u_content(special_url)
-    filtered_special_content = "\n".join(line for line in special_content.splitlines() if filter_url in line)
-    special_channels = compare_and_update_m3u(filtered_special_content, old_content, special_check=True)
-    #special_channels = filtered_special_content
+def compare_and_update_m3u(new_content, existing_content):
+    new_lines = new_content.splitlines()
+    existing_lines = existing_content.splitlines()
     
-    # Write to combined_cleaned.m3u and migu.m3u
+    to_process = []
+    
+    for i in range(0, len(new_lines), 2):
+        extinf_line = new_lines[i]
+        url_line = new_lines[i + 1]
+        
+        match = re.search(r'tvg-name="([^"]*)"', extinf_line)
+        tvg_name = match.group(1) if match else extinf_line.split(',')[-1]
+        
+        if (tvg_name, url_line) not in [(existing_lines[j], existing_lines[j+1]) for j in range(0, len(existing_lines), 2)]:
+            to_process.append((extinf_line, url_line))
+    
+    return to_process
+
+def fetch_m3u_content(url):
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.text
+    return None
+
+def process_multiple_m3u(url_list, special_url, filter_url):
+    # Fetching and combining content from URL list
+    combined_iplive_content = []
+    
+    for url in url_list:
+        content = fetch_m3u_content(url)
+        combined_iplive_content.append(content)
+    
+    iplive_content = '\n'.join(combined_iplive_content)
+
+    # Compare and process new content
+    try:
+        with open('iplive.m3u', 'r') as f:
+            existing_iplive_content = f.read()
+    except FileNotFoundError:
+        existing_iplive_content = ''
+
+    to_process_iplive = compare_and_update_m3u(iplive_content, existing_iplive_content)
+
+    with open('iplive.m3u', 'w') as f:
+        f.write(iplive_content)
+
+    # Fetching and processing special URL content
+    special_content = fetch_m3u_content(special_url)
+    filtered_special_content = process_m3u(special_content, filter_url=filter_url, special_process=True)
+    
+    try:
+        with open('combined_cleaned.m3u', 'r') as f:
+            existing_combined_content = f.read()
+    except FileNotFoundError:
+        existing_combined_content = ''
+
+    to_process_combined = compare_and_update_m3u(filtered_special_content, existing_combined_content)
+
+    # Append or replace processed content in combined_cleaned.m3u
     with open('combined_cleaned.m3u', 'a') as f:
-        f.write("\n".join(updated_channels))
+        for extinf, url in to_process_combined:
+            f.write(f"{extinf}\n{url}\n")
+
+    # Write filtered content to migu.m3u
     with open('migu.m3u', 'w') as f:
-        f.write("\n".join(special_channels))
+        f.write(filtered_special_content)
 
+process_multiple_m3u(url_list, special_url, filter_url)
 
-update_m3u_files()
