@@ -92,7 +92,7 @@ def process_m3u(content, filter_url=None, special_process=False):
 
             # Extract tvg-name or fallback to the title in #EXTINF line
             match = re.search(r'tvg-id="([^"]*)"', extinf_line)
-            tvg_name = match.group(1) if match else extinf_line.split(',')[-1]
+            tvg_name = match.group(1) if match else extinf_line.split(',')[-1].strip()
 
             if filter_url and filter_url in url_line:
                 special_process = True
@@ -119,7 +119,7 @@ def compare_and_update_m3u(new_content, existing_content):
         url_line = new_lines[i + 1]
         
         match = re.search(r'tvg-name="([^"]*)"', extinf_line)
-        tvg_name = match.group(1) if match else extinf_line.split(',')[-1]
+        tvg_name = match.group(1) if match else extinf_line.split(',')[-1].strip()
         
         if (tvg_name, url_line) not in [(existing_lines[j], existing_lines[j+1]) for j in range(0, len(existing_lines), 2)]:
             to_process.append((extinf_line, url_line))
