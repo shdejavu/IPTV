@@ -122,7 +122,7 @@ def compare_and_update_m3u(new_content, existing_content):
            match = re.search(r'tvg-name="([^"]*)"', extinf_line)
            tvg_name = match.group(1) if match else extinf_line.split(',')[-1].strip()
         
-           if (tvg_name, url_line) not in [(existing_lines[j], existing_lines[j+1]) for j in range(len(existing_lines))]:
+           if (tvg_name, url_line) not in [(existing_lines[j], existing_lines[j+1]) for j in range(len(existing_lines)-1)]:
               to_process.append((extinf_line, url_line))
     
     return to_process
