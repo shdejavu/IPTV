@@ -168,13 +168,15 @@ def process_multiple_m3u(url_list, special_url, filter_url):
     to_process_combined = compare_and_update_m3u(filtered_special_content, existing_combined_content)
 
     # Append or replace processed content in combined_cleaned.m3u
-    with open('combined_cleaned.m3u', 'a') as f:
-        for extinf, url in to_process_combined:
-            f.write(f"{extinf}\n{url}\n")
+    if len(to_process_combined)>0:
+        with open('combined_cleaned.m3u', 'a') as f:
+           for extinf, url in to_process_combined:
+              f.write(f"{extinf}\n{url}\n")
 
     # Write filtered content to migu.m3u
-    with open('migu.m3u', 'w') as f:
-        f.write(filtered_special_content)
+    if "#EXTINF" in filtered_special_content:
+        with open('migu.m3u', 'w') as f:
+           f.write(filtered_special_content)
 
 process_multiple_m3u(url_list, special_url, filter_url)
 
