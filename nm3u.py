@@ -114,15 +114,16 @@ def compare_and_update_m3u(new_content, existing_content):
     
     to_process = []
     
-    for i in range(0, len(new_lines), 2):
-        extinf_line = new_lines[i]
-        url_line = new_lines[i + 1]
+    while i < len(nwe_lines):
+        if line.startswith('#EXTINF') and (i + 1) < len(lines):
+           extinf_line = new_lines[i]
+           url_line = new_lines[i + 1]
         
-        match = re.search(r'tvg-name="([^"]*)"', extinf_line)
-        tvg_name = match.group(1) if match else extinf_line.split(',')[-1].strip()
+           match = re.search(r'tvg-name="([^"]*)"', extinf_line)
+           tvg_name = match.group(1) if match else extinf_line.split(',')[-1].strip()
         
-        if (tvg_name, url_line) not in [(existing_lines[j], existing_lines[j+1]) for j in range(0, len(existing_lines), 2)]:
-            to_process.append((extinf_line, url_line))
+           if (tvg_name, url_line) not in [(existing_lines[j], existing_lines[j+1]) for j in range(len(existing_lines))]:
+              to_process.append((extinf_line, url_line))
     
     return to_process
 
