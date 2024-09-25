@@ -1,139 +1,139 @@
 #EXTM3U
-#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV 1 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV1.png" group-title="ITV", CCTV 1 HEVC
+#EXTINF:-1 tvg-id="CCTV1" tvg-name="CCTV 1 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV1.png" group-title="央视", CCTV 1 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265001/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265001&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV 2" tvg-logo="https://assets.livednow.com/logo/CCTV2.png" group-title="ITV", CCTV 2
+#EXTINF:-1 tvg-id="CCTV2" tvg-name="CCTV 2" tvg-logo="https://assets.livednow.com/logo/CCTV2.png" group-title="央视", CCTV 2
 http://gslbserv.itv.cmvideo.cn:80/1000000001000023315/1.m3u8?channel-id=ystenlive&Contentid=1000000001000023315&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV 3 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV3.png" group-title="ITV", CCTV 3 HEVC
+#EXTINF:-1 tvg-id="CCTV3" tvg-name="CCTV 3 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV3.png" group-title="央视", CCTV 3 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265003/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265003&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV 4 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV4.png" group-title="ITV", CCTV 4 HEVC
+#EXTINF:-1 tvg-id="CCTV4" tvg-name="CCTV 4 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV4.png" group-title="央视", CCTV 4 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265004/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265004&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV 5 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV5.png" group-title="ITV", CCTV 5 HEVC
+#EXTINF:-1 tvg-id="CCTV5" tvg-name="CCTV 5 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV5.png" group-title="央视", CCTV 5 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265005/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265005&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV5-plus" tvg-name="CCTV 5+ HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV5-plus.png" group-title="ITV", CCTV 5+ HEVC
+#EXTINF:-1 tvg-id="CCTV5-plus" tvg-name="CCTV 5+ HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV5-plus.png" group-title="央视", CCTV 5+ HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265016/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265016&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV 6" tvg-logo="https://assets.livednow.com/logo/CCTV6.png" group-title="ITV", CCTV 6
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV 6" tvg-logo="https://assets.livednow.com/logo/CCTV6.png" group-title="央视", CCTV 6
 http://gslbserv.itv.cmvideo.cn:80/1000000001000001737/1.m3u8?channel-id=ystenlive&Contentid=1000000001000001737&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV 6 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV6.png" group-title="ITV", CCTV 6 HEVC
+#EXTINF:-1 tvg-id="CCTV6" tvg-name="CCTV 6 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV6.png" group-title="央视", CCTV 6 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265006/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265006&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV 7" tvg-logo="https://assets.livednow.com/logo/CCTV7.png" group-title="ITV", CCTV 7
+#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV 7" tvg-logo="https://assets.livednow.com/logo/CCTV7.png" group-title="央视", CCTV 7
 http://gslbserv.itv.cmvideo.cn:80/1000000001000024341/1.m3u8?channel-id=ystenlive&Contentid=1000000001000024341&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV 7 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV7.png" group-title="ITV", CCTV 7 HEVC
+#EXTINF:-1 tvg-id="CCTV7" tvg-name="CCTV 7 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV7.png" group-title="央视", CCTV 7 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265007/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265007&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV 8 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV8.png" group-title="ITV", CCTV 8 HEVC
+#EXTINF:-1 tvg-id="CCTV8" tvg-name="CCTV 8 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV8.png" group-title="央视", CCTV 8 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265008/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265008&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV 9" tvg-logo="https://assets.livednow.com/logo/CCTV9.png" group-title="ITV", CCTV 9
+#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV 9" tvg-logo="https://assets.livednow.com/logo/CCTV9.png" group-title="央视", CCTV 9
 http://gslbserv.itv.cmvideo.cn:80/1000000001000014583/1.m3u8?channel-id=ystenlive&Contentid=1000000001000014583&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV 9 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV9.png" group-title="ITV", CCTV 9 HEVC
+#EXTINF:-1 tvg-id="CCTV9" tvg-name="CCTV 9 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV9.png" group-title="央视", CCTV 9 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265009/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265009&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV 10" tvg-logo="https://assets.livednow.com/logo/CCTV10.png" group-title="ITV", CCTV 10
+#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV 10" tvg-logo="https://assets.livednow.com/logo/CCTV10.png" group-title="央视", CCTV 10
 http://gslbserv.itv.cmvideo.cn:80/1000000001000023734/1.m3u8?channel-id=ystenlive&Contentid=1000000001000023734&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV 10 50 FPS" tvg-logo="https://assets.livednow.com/logo/CCTV10.png" group-title="ITV", CCTV 10 50 FPS
+#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV 10 50 FPS" tvg-logo="https://assets.livednow.com/logo/CCTV10.png" group-title="央视", CCTV 10 50 FPS
 http://gslbserv.itv.cmvideo.cn:80/5000000004000012827/1.m3u8?channel-id=bestzb&Contentid=5000000004000012827&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV 10 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV10.png" group-title="ITV", CCTV 10 HEVC
+#EXTINF:-1 tvg-id="CCTV10" tvg-name="CCTV 10 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV10.png" group-title="央视", CCTV 10 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265010/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265010&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV 11 50 FPS" tvg-logo="https://assets.livednow.com/logo/CCTV11.png" group-title="ITV", CCTV 11 50 FPS
+#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV 11 50 FPS" tvg-logo="https://assets.livednow.com/logo/CCTV11.png" group-title="央视", CCTV 11 50 FPS
 http://gslbserv.itv.cmvideo.cn:80/5000000011000031106/1.m3u8?channel-id=bestzb&Contentid=5000000011000031106&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV 11 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV11.png" group-title="ITV", CCTV 11 HEVC
+#EXTINF:-1 tvg-id="CCTV11" tvg-name="CCTV 11 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV11.png" group-title="央视", CCTV 11 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265011/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265011&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV 12" tvg-logo="https://assets.livednow.com/logo/CCTV12.png" group-title="ITV", CCTV 12
+#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV 12" tvg-logo="https://assets.livednow.com/logo/CCTV12.png" group-title="央视", CCTV 12
 http://gslbserv.itv.cmvideo.cn:80/1000000001000032494/1.m3u8?channel-id=ystenlive&Contentid=1000000001000032494&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV 12 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV12.png" group-title="ITV", CCTV 12 HEVC
+#EXTINF:-1 tvg-id="CCTV12" tvg-name="CCTV 12 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV12.png" group-title="央视", CCTV 12 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265012/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265012&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV 13 50 FPS" tvg-logo="https://assets.livednow.com/logo/CCTV13.png" group-title="ITV", CCTV 13 50 FPS
+#EXTINF:-1 tvg-id="CCTV13" tvg-name="CCTV 13 50 FPS" tvg-logo="https://assets.livednow.com/logo/CCTV13.png" group-title="央视", CCTV 13 50 FPS
 http://gslbserv.itv.cmvideo.cn:80/5000000011000031108/1.m3u8?channel-id=bestzb&Contentid=5000000011000031108&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV14" tvg-name="CCTV 14" tvg-logo="https://assets.livednow.com/logo/CCTV14.png" group-title="ITV", CCTV 14
+#EXTINF:-1 tvg-id="CCTV14" tvg-name="CCTV 14" tvg-logo="https://assets.livednow.com/logo/CCTV14.png" group-title="央视", CCTV 14
 http://gslbserv.itv.cmvideo.cn:80/1000000001000008170/1.m3u8?channel-id=ystenlive&Contentid=1000000001000008170&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV14" tvg-name="CCTV 14 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV14.png" group-title="ITV", CCTV 14 HEVC
+#EXTINF:-1 tvg-id="CCTV14" tvg-name="CCTV 14 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV14.png" group-title="央视", CCTV 14 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265013/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265013&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV15" tvg-name="CCTV 15 50 FPS" tvg-logo="https://assets.livednow.com/logo/CCTV15.png" group-title="ITV", CCTV 15 50 FPS
+#EXTINF:-1 tvg-id="CCTV15" tvg-name="CCTV 15 50 FPS" tvg-logo="https://assets.livednow.com/logo/CCTV15.png" group-title="央视", CCTV 15 50 FPS
 http://gslbserv.itv.cmvideo.cn:80/5000000011000031109/1.m3u8?channel-id=bestzb&Contentid=5000000011000031109&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV15" tvg-name="CCTV 15 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV15.png" group-title="ITV", CCTV 15 HEVC
+#EXTINF:-1 tvg-id="CCTV15" tvg-name="CCTV 15 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV15.png" group-title="央视", CCTV 15 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265014/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265014&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV 16 4K HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV16.png" group-title="ITV", CCTV 16 4K HEVC
+#EXTINF:-1 tvg-id="CCTV16" tvg-name="CCTV 16 4K HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV16.png" group-title="央视", CCTV 16 4K HEVC
 http://gslbserv.itv.cmvideo.cn:80/5000000008000023254/1.m3u8?channel-id=bestzb&Contentid=5000000008000023254&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV17" tvg-name="CCTV 17" tvg-logo="https://assets.livednow.com/logo/CCTV17.png" group-title="ITV", CCTV 17
+#EXTINF:-1 tvg-id="CCTV17" tvg-name="CCTV 17" tvg-logo="https://assets.livednow.com/logo/CCTV17.png" group-title="央视", CCTV 17
 http://gslbserv.itv.cmvideo.cn:80/1000000006000268004/1.m3u8?channel-id=ystenlive&Contentid=1000000006000268004&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="CCTV17" tvg-name="CCTV 17 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV17.png" group-title="ITV", CCTV 17 HEVC
+#EXTINF:-1 tvg-id="CCTV17" tvg-name="CCTV 17 HEVC" tvg-logo="https://assets.livednow.com/logo/CCTV17.png" group-title="央视", CCTV 17 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265015/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265015&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/北京卫视.png" group-title="ITV", 北京卫视 HEVC
+#EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/北京卫视.png" group-title="卫视", 北京卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265027/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265027&livemode=1&stbId=3
 #EXTINF:0,东方卫视 50 FPS
 http://gslbservzqhsw.itv.cmvideo.cn/5000000004000014098/1.m3u8?channel-id=bestzb&Contentid=5000000004000014098&livemode=1&stbId=3
 #EXTINF:0,东方卫视 HEVC
 http://gslbservzqhsw.itv.cmvideo.cn/1000000005000265018/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265018&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视 50 FPS" tvg-logo="https://assets.livednow.com/logo/浙江卫视.png" group-title="ITV", 浙江卫视 50 FPS
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视 50 FPS" tvg-logo="https://assets.livednow.com/logo/浙江卫视.png" group-title="卫视", 浙江卫视 50 FPS
 http://gslbserv.itv.cmvideo.cn:80/5000000004000007275/1.m3u8?channel-id=bestzb&Contentid=5000000004000007275&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/浙江卫视.png" group-title="ITV", 浙江卫视 HEVC
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/浙江卫视.png" group-title="卫视", 浙江卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265031/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265031&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://assets.livednow.com/logo/浙江卫视.png" group-title="ITV", 浙江卫视
+#EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视" tvg-logo="https://assets.livednow.com/logo/浙江卫视.png" group-title="卫视", 浙江卫视
 http://gslbserv.itv.cmvideo.cn:80/1000000001000014260/1.m3u8?channel-id=ystenlive&Contentid=1000000001000014260&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/湖南卫视.png" group-title="ITV", 湖南卫视 HEVC
+#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/湖南卫视.png" group-title="卫视", 湖南卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265024/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265024&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://assets.livednow.com/logo/湖南卫视.png" group-title="ITV", 湖南卫视
+#EXTINF:-1 tvg-id="湖南卫视" tvg-name="湖南卫视" tvg-logo="https://assets.livednow.com/logo/湖南卫视.png" group-title="卫视", 湖南卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000004000006692/1.m3u8?channel-id=bestzb&Contentid=5000000004000006692&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/江苏卫视.png" group-title="ITV", 江苏卫视 HEVC
+#EXTINF:-1 tvg-id="江苏卫视" tvg-name="江苏卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/江苏卫视.png" group-title="卫视", 江苏卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265030/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265030&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/深圳卫视.png" group-title="ITV", 深圳卫视 HEVC
+#EXTINF:-1 tvg-id="深圳卫视" tvg-name="深圳卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/深圳卫视.png" group-title="卫视", 深圳卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265028/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265028&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="东南卫视" tvg-name="东南卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/东南卫视.png" group-title="ITV", 东南卫视 HEVC
+#EXTINF:-1 tvg-id="东南卫视" tvg-name="东南卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/东南卫视.png" group-title="卫视", 东南卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265033/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265033&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="东南卫视" tvg-name="东南卫视" tvg-logo="https://assets.livednow.com/logo/东南卫视.png" group-title="ITV", 东南卫视
+#EXTINF:-1 tvg-id="东南卫视" tvg-name="东南卫视" tvg-logo="https://assets.livednow.com/logo/东南卫视.png" group-title="卫视", 东南卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000004000010584/1.m3u8?channel-id=bestzb&Contentid=5000000004000010584&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/天津卫视.png" group-title="ITV", 天津卫视 HEVC
+#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/天津卫视.png" group-title="卫视", 天津卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265026/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265026&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://assets.livednow.com/logo/天津卫视.png" group-title="ITV", 天津卫视
+#EXTINF:-1 tvg-id="天津卫视" tvg-name="天津卫视" tvg-logo="https://assets.livednow.com/logo/天津卫视.png" group-title="卫视", 天津卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000004000006827/1.m3u8?channel-id=bestzb&Contentid=5000000004000006827&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/山东卫视.png" group-title="ITV", 山东卫视 HEVC
+#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/山东卫视.png" group-title="卫视", 山东卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265019/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265019&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://assets.livednow.com/logo/山东卫视.png" group-title="ITV", 山东卫视
+#EXTINF:-1 tvg-id="山东卫视" tvg-name="山东卫视" tvg-logo="https://assets.livednow.com/logo/山东卫视.png" group-title="卫视", 山东卫视
 http://gslbserv.itv.cmvideo.cn:80/1000000001000016568/1.m3u8?channel-id=ystenlive&Contentid=1000000001000016568&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/湖北卫视.png" group-title="ITV", 湖北卫视 HEVC
+#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/湖北卫视.png" group-title="卫视", 湖北卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265023/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265023&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="https://assets.livednow.com/logo/湖北卫视.png" group-title="ITV", 湖北卫视
+#EXTINF:-1 tvg-id="湖北卫视" tvg-name="湖北卫视" tvg-logo="https://assets.livednow.com/logo/湖北卫视.png" group-title="卫视", 湖北卫视
 http://gslbserv.itv.cmvideo.cn:80/1000000001000024621/1.m3u8?channel-id=ystenlive&Contentid=1000000001000024621&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/安徽卫视.png" group-title="ITV", 安徽卫视 HEVC
+#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/安徽卫视.png" group-title="卫视", 安徽卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265025/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265025&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://assets.livednow.com/logo/安徽卫视.png" group-title="ITV", 安徽卫视
+#EXTINF:-1 tvg-id="安徽卫视" tvg-name="安徽卫视" tvg-logo="https://assets.livednow.com/logo/安徽卫视.png" group-title="卫视", 安徽卫视
 http://gslbserv.itv.cmvideo.cn:80/1000000001000030159/1.m3u8?channel-id=ystenlive&Contentid=1000000001000030159&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="广东卫视" tvg-name="广东卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/广东卫视.png" group-title="ITV", 广东卫视 HEVC
+#EXTINF:-1 tvg-id="广东卫视" tvg-name="广东卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/广东卫视.png" group-title="卫视", 广东卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265034/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265034&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://assets.livednow.com/logo/吉林卫视.png" group-title="ITV", 吉林卫视
+#EXTINF:-1 tvg-id="吉林卫视" tvg-name="吉林卫视" tvg-logo="https://assets.livednow.com/logo/吉林卫视.png" group-title="卫视", 吉林卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000011000031117/1.m3u8?channel-id=bestzb&Contentid=5000000011000031117&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/江西卫视.png" group-title="ITV", 江西卫视 HEVC
+#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/江西卫视.png" group-title="卫视", 江西卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265032/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265032&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://assets.livednow.com/logo/江西卫视.png" group-title="ITV", 江西卫视
+#EXTINF:-1 tvg-id="江西卫视" tvg-name="江西卫视" tvg-logo="https://assets.livednow.com/logo/江西卫视.png" group-title="卫视", 江西卫视
 http://gslbserv.itv.cmvideo.cn:80/1000000006000268001/1.m3u8?channel-id=ystenlive&Contentid=1000000006000268001&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/辽宁卫视.png" group-title="ITV", 辽宁卫视 HEVC
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/辽宁卫视.png" group-title="卫视", 辽宁卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265022/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265022&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="https://assets.livednow.com/logo/辽宁卫视.png" group-title="ITV", 辽宁卫视
+#EXTINF:-1 tvg-id="辽宁卫视" tvg-name="辽宁卫视" tvg-logo="https://assets.livednow.com/logo/辽宁卫视.png" group-title="卫视", 辽宁卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000004000011671/1.m3u8?channel-id=bestzb&Contentid=5000000004000011671&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/重庆卫视.png" group-title="ITV", 重庆卫视 HEVC
+#EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/重庆卫视.png" group-title="卫视", 重庆卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265017/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265017&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视" tvg-logo="https://assets.livednow.com/logo/重庆卫视.png" group-title="ITV", 重庆卫视
+#EXTINF:-1 tvg-id="重庆卫视" tvg-name="重庆卫视" tvg-logo="https://assets.livednow.com/logo/重庆卫视.png" group-title="卫视", 重庆卫视
 http://gslbserv.itv.cmvideo.cn:80/1000000001000001096/1.m3u8?channel-id=ystenlive&Contentid=1000000001000001096&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/黑龙江卫视.png" group-title="ITV", 黑龙江卫视 HEVC
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/黑龙江卫视.png" group-title="卫视", 黑龙江卫视 HEVC
 http://gslbserv.itv.cmvideo.cn:80/1000000005000265029/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265029&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://assets.livednow.com/logo/黑龙江卫视.png" group-title="ITV", 黑龙江卫视
+#EXTINF:-1 tvg-id="黑龙江卫视" tvg-name="黑龙江卫视" tvg-logo="https://assets.livednow.com/logo/黑龙江卫视.png" group-title="卫视", 黑龙江卫视
 http://gslbserv.itv.cmvideo.cn:80/1000000001000001925/1.m3u8?channel-id=ystenlive&Contentid=1000000001000001925&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="广东卫视" tvg-name="广东卫视" tvg-logo="https://assets.livednow.com/logo/广东卫视.png" group-title="ITV", 广东卫视
+#EXTINF:-1 tvg-id="广东卫视" tvg-name="广东卫视" tvg-logo="https://assets.livednow.com/logo/广东卫视.png" group-title="卫视", 广东卫视
 http://gslbserv.itv.cmvideo.cn:80/1000000001000014176/1.m3u8?channel-id=ystenlive&Contentid=1000000001000014176&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://assets.livednow.com/logo/广西卫视.png" group-title="ITV", 广西卫视
+#EXTINF:-1 tvg-id="广西卫视" tvg-name="广西卫视" tvg-logo="https://assets.livednow.com/logo/广西卫视.png" group-title="卫视", 广西卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000011000031118/1.m3u8?channel-id=bestzb&Contentid=5000000011000031118&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://assets.livednow.com/logo/四川卫视.png" group-title="ITV", 四川卫视
+#EXTINF:-1 tvg-id="四川卫视" tvg-name="四川卫视" tvg-logo="https://assets.livednow.com/logo/四川卫视.png" group-title="卫视", 四川卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000004000006119/1.m3u8?channel-id=bestzb&Contentid=5000000004000006119&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://assets.livednow.com/logo/河北卫视.png" group-title="ITV", 河北卫视
+#EXTINF:-1 tvg-id="河北卫视" tvg-name="河北卫视" tvg-logo="https://assets.livednow.com/logo/河北卫视.png" group-title="卫视", 河北卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000006000040016/1.m3u8?channel-id=bestzb&Contentid=5000000006000040016&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://assets.livednow.com/logo/河南卫视.png" group-title="ITV", 河南卫视
+#EXTINF:-1 tvg-id="河南卫视" tvg-name="河南卫视" tvg-logo="https://assets.livednow.com/logo/河南卫视.png" group-title="卫视", 河南卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000011000031119/1.m3u8?channel-id=bestzb&Contentid=5000000011000031119&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://assets.livednow.com/logo/贵州卫视.png" group-title="ITV", 贵州卫视
+#EXTINF:-1 tvg-id="贵州卫视" tvg-name="贵州卫视" tvg-logo="https://assets.livednow.com/logo/贵州卫视.png" group-title="卫视", 贵州卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000004000025843/1.m3u8?channel-id=bestzb&Contentid=5000000004000025843&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="https://assets.livednow.com/logo/甘肃卫视.png" group-title="ITV", 甘肃卫视
+#EXTINF:-1 tvg-id="甘肃卫视" tvg-name="甘肃卫视" tvg-logo="https://assets.livednow.com/logo/甘肃卫视.png" group-title="卫视", 甘肃卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000011000031121/1.m3u8?channel-id=bestzb&Contentid=5000000011000031121&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://assets.livednow.com/logo/云南卫视.png" group-title="ITV", 云南卫视
+#EXTINF:-1 tvg-id="云南卫视" tvg-name="云南卫视" tvg-logo="https://assets.livednow.com/logo/云南卫视.png" group-title="卫视", 云南卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000011000031120/1.m3u8?channel-id=bestzb&Contentid=5000000011000031120&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="https://assets.livednow.com/logo/海南卫视.png" group-title="ITV", 海南卫视
+#EXTINF:-1 tvg-id="海南卫视" tvg-name="海南卫视" tvg-logo="https://assets.livednow.com/logo/海南卫视.png" group-title="卫视", 海南卫视
 http://gslbserv.itv.cmvideo.cn:80/5000000004000006211/1.m3u8?channel-id=bestzb&Contentid=5000000004000006211&livemode=1&stbId=3
-#EXTINF:-1 tvg-id="青海卫视" tvg-name="青海卫视" tvg-logo="https://assets.livednow.com/logo/青海卫视.png" group-title="ITV", 青海卫视
+#EXTINF:-1 tvg-id="青海卫视" tvg-name="青海卫视" tvg-logo="https://assets.livednow.com/logo/青海卫视.png" group-title="卫视", 青海卫视
 http://gslbserv.itv.cmvideo.cn:80/1000000002000013359/1.m3u8?channel-id=ystenlive&Contentid=1000000002000013359&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="纯享-4K" tvg-name="纯享 4K" tvg-logo="https://assets.livednow.com/logo/纯享-4K.png" group-title="ITV", 纯享 4K
 http://gslbserv.itv.cmvideo.cn:80/1000000004000011651/1.m3u8?channel-id=ystenlive&Contentid=1000000004000011651&livemode=1&stbId=3
