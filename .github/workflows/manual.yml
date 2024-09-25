@@ -43,8 +43,10 @@ jobs:
         
     - name: Run JP script
       run: |
+        curl https://raw.githubusercontent.com/shdejavu/epg/master/guide.xml >jp.xml
         grep -A1 '.jp"' combined_cleaned.m3u >jp.m3u
         python grouptitle.py
+        python tvgname.py
         cat itv_p.m3u migu.m3u all0.m3u jp.m3u >allback.m3u
     - name: Commit changes
       run: |
