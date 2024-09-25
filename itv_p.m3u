@@ -57,9 +57,9 @@ http://gslbservzqhsw.itv.cmvideo.cn/1000000006000268004/1.m3u8?channel-id=ystenl
 http://gslbservzqhsw.itv.cmvideo.cn/1000000005000265015/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265015&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="北京卫视" tvg-name="北京卫视 HEVC" tvg-logo="https://assets.livednow.com/logo/北京卫视.png" group-title="卫视", 北京卫视 HEVC
 http://gslbservzqhsw.itv.cmvideo.cn/1000000005000265027/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265027&livemode=1&stbId=3
-#EXTINF:0,东方卫视 50 FPS
+#EXTINF:0 tvg-name="东方卫视 50 FPS"  group-title="ITV",东方卫视 50 FPS
 http://gslbservzqhsw.itv.cmvideo.cn/5000000004000014098/1.m3u8?channel-id=bestzb&Contentid=5000000004000014098&livemode=1&stbId=3
-#EXTINF:0,东方卫视 HEVC
+#EXTINF:0 tvg-name="东方卫视 HEVC"  group-title="ITV",东方卫视 HEVC
 http://gslbservzqhsw.itv.cmvideo.cn/1000000005000265018/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265018&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="浙江卫视" tvg-name="浙江卫视 50 FPS" tvg-logo="https://assets.livednow.com/logo/浙江卫视.png" group-title="卫视", 浙江卫视 50 FPS
 http://gslbservzqhsw.itv.cmvideo.cn/5000000004000007275/1.m3u8?channel-id=bestzb&Contentid=5000000004000007275&livemode=1&stbId=3
@@ -137,9 +137,9 @@ http://gslbservzqhsw.itv.cmvideo.cn/5000000004000006211/1.m3u8?channel-id=bestzb
 http://gslbservzqhsw.itv.cmvideo.cn/1000000002000013359/1.m3u8?channel-id=ystenlive&Contentid=1000000002000013359&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="纯享-4K" tvg-name="纯享 4K" tvg-logo="https://assets.livednow.com/logo/纯享-4K.png" group-title="ITV", 纯享 4K
 http://gslbservzqhsw.itv.cmvideo.cn/1000000004000011651/1.m3u8?channel-id=ystenlive&Contentid=1000000004000011651&livemode=1&stbId=3
-#EXTINF:0,中国教育电视台 CETV-1
+#EXTINF:0 tvg-name="中国教育电视台 CETV-1"  group-title="ITV",中国教育电视台 CETV-1
 http://gslbservzqhsw.itv.cmvideo.cn/5000000002000002652/1.m3u8?channel-id=bestzb&Contentid=5000000002000002652&livemode=1&stbId=3
-#EXTINF:0,中国教育电视台CETV-4
+#EXTINF:0 tvg-name="中国教育电视台CETV-4"  group-title="ITV",中国教育电视台CETV-4
 http://gslbservzqhsw.itv.cmvideo.cn/5000000011000031126/1.m3u8?channel-id=bestzb&Contentid=5000000011000031126&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="北京纪实科教" tvg-name="北京纪实科教 HEVC" tvg-logo="https://assets.livednow.com/logo/北京纪实科教.png" group-title="ITV", 北京纪实科教 HEVC
 http://gslbservzqhsw.itv.cmvideo.cn/1000000005000265020/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265020&livemode=1&stbId=3
@@ -151,7 +151,7 @@ http://gslbservzqhsw.itv.cmvideo.cn/7851974109718180595/1.m3u8?channel-id=bestzb
 http://gslbservzqhsw.itv.cmvideo.cn/5000000011000031203/1.m3u8?channel-id=bestzb&Contentid=5000000011000031203&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="湖南快乐垂钓" tvg-name="湖南快乐垂钓" tvg-logo="https://assets.livednow.com/logo/湖南快乐垂钓.png" group-title="ITV", 湖南快乐垂钓
 http://gslbservzqhsw.itv.cmvideo.cn/5000000011000031206/1.m3u8?channel-id=bestzb&Contentid=5000000011000031206&livemode=1&stbId=3
-#EXTINF:0,湖南茶友频道
+#EXTINF:0 tvg-name="湖南茶友频道"  group-title="ITV",湖南茶友频道
 http://gslbservzqhsw.itv.cmvideo.cn/5000000011000031209/1.m3u8?channel-id=bestzb&Contentid=5000000011000031209&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="NewTV-精品综合" tvg-name="NewTV 精品综合" tvg-logo="https://assets.livednow.com/logo/NewTV-精品综合.png" group-title="ITV", NewTV 精品综合
 http://gslbservzqhsw.itv.cmvideo.cn/1000000004000019008/1.m3u8?channel-id=ystenlive&Contentid=1000000004000019008&livemode=1&stbId=3
@@ -195,29 +195,29 @@ http://gslbservzqhsw.itv.cmvideo.cn/1000000004000019624/1.m3u8?channel-id=ystenl
 http://gslbservzqhsw.itv.cmvideo.cn/1000000004000021734/1.m3u8?channel-id=ystenlive&Contentid=1000000004000021734&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="NewTV-欢乐剧场" tvg-name="NewTV 欢乐剧场" tvg-logo="https://assets.livednow.com/logo/NewTV-欢乐剧场.png" group-title="ITV", NewTV 欢乐剧场
 http://gslbservzqhsw.itv.cmvideo.cn/1000000005000266012/1.m3u8?channel-id=ystenlive&Contentid=1000000005000266012&livemode=1&stbId=3
-#EXTINF:0,NewTV游戏风云
+#EXTINF:0 tvg-name="NewTV游戏风云"  group-title="ITV",NewTV游戏风云
 http://gslbservzqhsw.itv.cmvideo.cn/5000000011000031114/1.m3u8?channel-id=bestzb&Contentid=5000000011000031114&livemode=1&stbId=3
-#EXTINF:0,SiTV 新闻综合
+#EXTINF:0 tvg-name="SiTV 新闻综合"  group-title="ITV",SiTV 新闻综合
 http://gslbservzqhsw.itv.cmvideo.cn/5000000011000031110/1.m3u8?channel-id=bestzb&Contentid=5000000011000031110&livemode=1&stbId=3
-#EXTINF:0,SiTV 上海ICS外语
+#EXTINF:0 tvg-name="SiTV 上海ICS外语"  group-title="ITV",SiTV 上海ICS外语
 http://gslbservzqhsw.itv.cmvideo.cn/5000000010000030951/1.m3u8?channel-id=bestzb&Contentid=5000000010000030951&livemode=1&stbId=3
-#EXTINF:0,SiTV 上海都市
+#EXTINF:0 tvg-name="SiTV 上海都市"  group-title="ITV",SiTV 上海都市
 http://gslbservzqhsw.itv.cmvideo.cn/5000000010000018926/1.m3u8?channel-id=bestzb&Contentid=5000000010000018926&livemode=1&stbId=3
-#EXTINF:0,SiTV 五星体育
+#EXTINF:0 tvg-name="SiTV 五星体育"  group-title="ITV",SiTV 五星体育
 http://gslbservzqhsw.itv.cmvideo.cn/5000000010000017540/1.m3u8?channel-id=bestzb&Contentid=5000000010000017540&livemode=1&stbId=3
-#EXTINF:0,SiTV 纪实人文 50 FPS
+#EXTINF:0 tvg-name="SiTV 纪实人文 50 FPS"  group-title="ITV",SiTV 纪实人文 50 FPS
 http://gslbservzqhsw.itv.cmvideo.cn/5000000004000010282/1.m3u8?channel-id=bestzb&Contentid=5000000004000010282&livemode=1&stbId=3
-#EXTINF:0,SiTV 纪实人文 HEVC
+#EXTINF:0 tvg-name="SiTV 纪实人文 HEVC"  group-title="ITV",SiTV 纪实人文 HEVC
 http://gslbservzqhsw.itv.cmvideo.cn/1000000005000265021/1.m3u8?channel-id=ystenlive&Contentid=1000000005000265021&livemode=1&stbId=3
-#EXTINF:0,SiTV 哈哈炫动
+#EXTINF:0 tvg-name="SiTV 哈哈炫动"  group-title="ITV",SiTV 哈哈炫动
 http://gslbservzqhsw.itv.cmvideo.cn/5000000011000031123/1.m3u8?channel-id=bestzb&Contentid=5000000011000031123&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="SiTV-乐游" tvg-name="SiTV 乐游" tvg-logo="https://assets.livednow.com/logo/SiTV-乐游.png" group-title="ITV", SiTV 乐游
 http://gslbservzqhsw.itv.cmvideo.cn/5000000011000031112/1.m3u8?channel-id=bestzb&Contentid=5000000011000031112&livemode=1&stbId=3
-#EXTINF:0,SiTV 第一财经
+#EXTINF:0 tvg-name="SiTV 第一财经"  group-title="ITV",SiTV 第一财经
 http://gslbservzqhsw.itv.cmvideo.cn/5000000010000027146/1.m3u8?channel-id=bestzb&Contentid=5000000010000027146&livemode=1&stbId=3
-#EXTINF:0,SiTV 东方财经
+#EXTINF:0 tvg-name="SiTV 东方财经"  group-title="ITV",SiTV 东方财经
 http://gslbservzqhsw.itv.cmvideo.cn/5000000007000010003/1.m3u8?channel-id=bestzb&Contentid=5000000007000010003&livemode=1&stbId=3
-#EXTINF:0,SiTV 东方影视
+#EXTINF:0 tvg-name="SiTV 东方影视"  group-title="ITV",SiTV 东方影视
 http://gslbservzqhsw.itv.cmvideo.cn/5000000010000032212/1.m3u8?channel-id=bestzb&Contentid=5000000010000032212&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="SiTV-生活时尚" tvg-name="SiTV 生活时尚" tvg-logo="https://assets.livednow.com/logo/SiTV-生活时尚.png" group-title="ITV", SiTV 生活时尚
 http://gslbservzqhsw.itv.cmvideo.cn/5000000002000019634/1.m3u8?channel-id=bestzb&Contentid=5000000002000019634&livemode=1&stbId=3
@@ -225,7 +225,7 @@ http://gslbservzqhsw.itv.cmvideo.cn/5000000002000019634/1.m3u8?channel-id=bestzb
 http://gslbservzqhsw.itv.cmvideo.cn/5000000011000031207/1.m3u8?channel-id=bestzb&Contentid=5000000011000031207&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="SiTV-劲爆体育" tvg-name="SiTV 劲爆体育" tvg-logo="https://assets.livednow.com/logo/SiTV-劲爆体育.png" group-title="ITV", SiTV 劲爆体育
 http://gslbservzqhsw.itv.cmvideo.cn/5000000002000029972/1.m3u8?channel-id=bestzb&Contentid=5000000002000029972&livemode=1&stbId=3
-#EXTINF:0,SiTV 欢笑剧场 4K
+#EXTINF:0 tvg-name="SiTV 欢笑剧场 4K"  group-title="ITV",SiTV 欢笑剧场 4K
 http://gslbservzqhsw.itv.cmvideo.cn/5000000007000010001/1.m3u8?channel-id=bestzb&Contentid=5000000007000010001&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="SiTV-欢笑剧场" tvg-name="SiTV 欢笑剧场" tvg-logo="https://assets.livednow.com/logo/SiTV-欢笑剧场.png" group-title="ITV", SiTV 欢笑剧场
 http://gslbservzqhsw.itv.cmvideo.cn/5000000002000009455/1.m3u8?channel-id=bestzb&Contentid=5000000002000009455&livemode=1&stbId=3

@@ -10,7 +10,14 @@ def modify_extinf(extinf_line, title, flag=0):
             'tvg-id="' + (re.sub(r"(CCTV)(\d+)", r"\1 \2", m.group(2)) if "CCTV" in m.group(2) else m.group(2)) + '" ' +
             'tvg-name="' + re.sub(r"(CCTV)(\d+)", r"\1 \2", m.group(2)) + '"'  # Format tvg-name
         ), extinf_line)
-    modified_line = re.sub(r'group-title="[^"]+"', 'group-title="{}"'.format(title), extinf_line)
+    if 'group-title' in extinf_line:
+        modified_line = re.sub(r'group-title="[^"]+"', 'group-title="{}"'.format(title), extinf_line)
+    elif ',' in extinf_line:
+        name=extinf_line.split(',')[-1].strip()
+        aaa=''
+        if 'tvg-name' not in extinf_line:
+           aaa=' tvg-name="{}" '.format(name)
+        modified_line=extinf_line.split(',')[0]+aaa+' group-title="{}",'.format(title)+name
     return modified_line
 
 # Function to parse M3U file and return a dictionary of metadata keyed by channel name
@@ -63,7 +70,7 @@ def update_m3u(old_m3u, new_m3u, output_m3u):
                         updated_lines.append(extinf)  # Replace with the detailed #EXTINF from the old file
                         updated_lines.append(url)  # Replace with the corresponding URL from the old file
                     else:
-                        extinf_line=modify_extinf(line,match)
+                        extinf_line=modify_extinf(line,'ITV')
                         updated_lines.append(extinf_line)  # Keep the new EXTINF if no match is found
                         updated_lines.append(url)  # Add the corresponding URL
                 i += 2  # Skip over the next URL line since it's already processed
