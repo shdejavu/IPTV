@@ -10,14 +10,16 @@ def modify_extinf(extinf_line, title, flag=0):
             'tvg-id="' + (re.sub(r"(CCTV)(\d+)", r"\1 \2", m.group(2)) if "CCTV" in m.group(2) else m.group(2)) + '" ' +
             'tvg-name="' + re.sub(r"(CCTV)(\d+)", r"\1 \2", m.group(2)) + '"'  # Format tvg-name
         ), extinf_line)
+
+    name=extinf_line.split(',')[-1].strip()
+    aaa=''
+    if 'tvg-name' not in extinf_line:
+        aaa=' tvg-name="{}" '.format(name)
     if 'group-title' in extinf_line:
-        modified_line = re.sub(r'group-title="[^"]+"', 'group-title="{}"'.format(title), extinf_line)
+        modified_line = re.sub(r'group-title="[^"]+"', aaa+'group-title="{}"'.format(title), extinf_line)
     elif ',' in extinf_line:
-        name=extinf_line.split(',')[-1].strip()
-        aaa=''
-        if 'tvg-name' not in extinf_line:
-           aaa=' tvg-name="{}" '.format(name)
         modified_line=extinf_line.split(',')[0]+aaa+' group-title="{}",'.format(title)+name
+    modified_line = re.sub( r'tvg-name="([^"]*?)(?: (50|HEVC))(?:.*?)?"', lambda m: f'tvg-name="{m.group(1)}"', modified_line, flags=re.IGNORECASE)
     return modified_line
 
 # Function to parse M3U file and return a dictionary of metadata keyed by channel name
