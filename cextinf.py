@@ -56,14 +56,16 @@ def update_m3u(old_m3u, new_m3u, output_m3u):
                 match=line.split(',')[-1].strip().replace(' ','')
                 if match:
                     channel_name = match  # Clean up the channel name
+                    url = lines[i + 1].strip()  # The URL comes right after the #EXTINF line
                     # Check if metadata is available in old M3U for this channel
                     if channel_name in old_metadata:
-                        extinf, url = old_metadata[channel_name]  # Get both EXTINF and URL from the old file
+                        extinf,old_url = old_metadata[channel_name]  # Get both EXTINF and URL from the old file
                         updated_lines.append(extinf)  # Replace with the detailed #EXTINF from the old file
                         updated_lines.append(url)  # Replace with the corresponding URL from the old file
                     else:
-                        updated_lines.append(line)  # Keep the new EXTINF if no match is found
-                        updated_lines.append(lines[i + 1].strip())  # Add the corresponding URL
+                        extinf_line=modify_extinf(line,match)
+                        updated_lines.append(extinf_line)  # Keep the new EXTINF if no match is found
+                        updated_lines.append(url)  # Add the corresponding URL
                 i += 2  # Skip over the next URL line since it's already processed
             else:
                 updated_lines.append(line)  # Add non-EXTINF lines (e.g., comments, unrelated URLs)
