@@ -23,12 +23,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
 
-    - name: Download and concatenate m3u files for iplive
-      run: |
-        curl https://assets.livednow.com/epg.xml > epg.xml
-        curl https://raw.githubusercontent.com/shdejavu/epg/master/guide.xml >jp.xml
-        python epgmerge.py
-
     - name: Run M3U processing script
       run: |
         python nm3u.py
@@ -43,7 +37,6 @@ jobs:
         
     - name: Run JP script
       run: |
-        curl https://raw.githubusercontent.com/shdejavu/epg/master/guide.xml >jp.xml
         grep -A1 '.jp"' combined_cleaned.m3u >jp.m3u
         python grouptitle.py
         python tvgname.py
