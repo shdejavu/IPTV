@@ -59,22 +59,24 @@ def write_special_m3u(content, files):
     with open(files, 'w') as file:
         file.write(content)
 
-def is_url_speed_acceptable(url, chunk_size=NORMAL_CHUNK_SIZE):
+def is_url_speed_acceptable(url, special=False):
+    chunk_size = 10240 if not special else 10240 * 10  # Larger chunk size for special URLs
+
     try:
         response = requests.get(url, stream=True, timeout=10)
         if response.status_code != 200:
             return False
-        if not is_valid_media_type(response):
-            print(f"Invalid media type: {response.headers.get('Content-Type')}")
-            return False
+        
         start_time = time.time()
         chunk = next(response.iter_content(chunk_size=chunk_size), None)
         end_time = time.time()
+
         if chunk is None:
             return False
+
         download_time = end_time - start_time
         speed_kbps = (len(chunk) / 1024) / download_time
-        print(f"URL: {url} | Speed: {speed_kbps:.2f} KB/s")
+
         return speed_kbps >= SPEED_THRESHOLD_KBPS
     except requests.RequestException:
         return False
