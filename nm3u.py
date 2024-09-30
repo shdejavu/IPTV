@@ -113,8 +113,9 @@ def compare_and_update_m3u(new_content, existing_content):
     existing_lines = existing_content.splitlines()
     
     to_process = []
+    i=0
     
-    while i < len(nwe_lines):
+    while i < len(new_lines):
         if line.startswith('#EXTINF') and (i + 1) < len(lines):
            extinf_line = new_lines[i]
            url_line = new_lines[i + 1]
@@ -124,6 +125,10 @@ def compare_and_update_m3u(new_content, existing_content):
         
            if (tvg_name, url_line) not in [(existing_lines[j], existing_lines[j+1]) for j in range(len(existing_lines)-1)]:
               to_process.append((extinf_line, url_line))
+
+           i+=2
+        else:
+           i+=1
     
     return to_process
 
