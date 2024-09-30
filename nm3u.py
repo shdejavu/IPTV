@@ -116,7 +116,7 @@ def compare_and_update_m3u(new_content, existing_content):
     i=0
     
     while i < len(new_lines):
-        if line.startswith('#EXTINF') and (i + 1) < len(lines):
+        if new_lines[i].startswith('#EXTINF') and (i + 1) < len(new_lines):
            extinf_line = new_lines[i]
            url_line = new_lines[i + 1]
         
