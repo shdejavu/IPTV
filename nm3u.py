@@ -164,7 +164,8 @@ def process_multiple_m3u(url_list, special_url, filter_url):
 
     # Fetching and processing special URL content
     special_content = fetch_m3u_content(special_url)
-    filtered_special_content = process_m3u(special_content, filter_url=filter_url, special_process=True)
+    #filtered_special_content = process_m3u(special_content, filter_url=filter_url, special_process=True)
+    filtered_special_content = special_content
     
     try:
         with open('combined_cleaned.m3u', 'r') as f:
