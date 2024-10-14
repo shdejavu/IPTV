@@ -5,10 +5,10 @@ import os
 
 # URLs to fetch
 url_list = [
-    'https://iptv-org.github.io/iptv/languages/zho.m3u',
-    'https://iptv-org.github.io/iptv/languages/jpn.m3u',
-    'https://iptv-org.github.io/iptv/languages/eng.m3u',
-    'https://iptv-org.github.io/iptv/languages/undefined.m3u'
+    'https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/cn.m3u',
+    'https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/jp.m3u',
+    'https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/jp_primehome.m3u',
+    'https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/us.m3u'
 ]
 
 special_url = 'https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u'
