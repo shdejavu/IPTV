@@ -29,11 +29,11 @@ jobs:
 
     - name: Download and concatenate m3u files for iplive
       run: |
-        curl https://iptv-org.github.io/iptv/languages/zho.m3u > zho.m3u
-        curl https://iptv-org.github.io/iptv/languages/jpn.m3u > jpn.m3u
-        curl https://iptv-org.github.io/iptv/languages/eng.m3u > eng.m3u
-        curl https://iptv-org.github.io/iptv/languages/undefined.m3u > undefined.m3u
-        cat zho.m3u jpn.m3u eng.m3u undefined.m3u > iplive.m3u
+        curl https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/jp.m3u > jp.m3u
+        curl https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/jp_primehome.m3u > jp2.m3u
+        curl https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/cn.m3u > cn.m3u
+        curl https://raw.githubusercontent.com/iptv-org/iptv/refs/heads/master/streams/us.m3u > us.m3u
+        cat cn.m3u jp.m3u jp2.m3u us.m3u> iplive.m3u
         
     - name: Run JP script
       run: |
